@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy on Dokploy
+
+1. **Create Application**: In your Dokploy dashboard, create a new application and connect this repository.
+2. **Build Settings**:
+   - Go to **Settings** > **Build**.
+   - Select **Docker** as the Build Type (this project includes a `Dockerfile`).
+3. **Environment Variables**:
+   - Go to **Environment** tab.
+   - Click **Add Variable** (or the Plus icon).
+   - Add the following variables:
+     - `NODE_ENV` = `production`
+     - `PORT` = `3000`
+     - `HOSTNAME` = `0.0.0.0`
+4. **Deploy**: Click the **Deploy** button.
