@@ -17,7 +17,7 @@ export default function BlauwgraslandPage() {
                     <ArrowLeft size={16} /> Terug naar Dashboard
                 </Link>
                 <h2 className="text-3xl font-black text-white font-serif mb-6">Het Cirsio-Molinietum</h2>
-                <div className="prose prose-invert prose-lg max-w-none text-slate-300 font-light">
+                <div className="prose prose-invert prose-lg max-w-2xl text-slate-200 font-light leading-loose">
                     <p>
                         Blauwgraslanden (wetenschappelijk: <em>Cirsio-Molinietum</em>) behoren tot de meest soortenrijke graslanden van Europa.
                         Ze danken hun naam aan de blauwgroene kleur van de zeggen en grassen (zoals Blauwe Zegge en Pijpenstrootje) die in de zomer het beeld bepalen,

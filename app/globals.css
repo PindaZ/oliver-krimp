@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    scroll-padding-top: 100px;
+  }
+
   body {
-    @apply bg-fixed min-h-screen text-slate-100 font-sans antialiased;
+    @apply bg-fixed min-h-screen text-slate-100 font-sans antialiased leading-relaxed;
     background: linear-gradient(to bottom right, #051605 0%, #0d280d 50%, #1a3c1a 100%);
   }
 
@@ -13,6 +17,7 @@
   h5,
   h6 {
     @apply font-serif tracking-tight text-white;
+    text-wrap: balance;
   }
 }
 
