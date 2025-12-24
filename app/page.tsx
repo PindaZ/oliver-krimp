@@ -19,8 +19,12 @@ export default function Dashboard() {
       />
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {metrics.map((m) => (
-          <div key={m.label} className="glass-card p-6 flex flex-col items-center text-center space-y-3 group border-t border-white/5 relative hover:border-white/20 transition-all">
+        {metrics.map((m, i) => (
+          <div
+            key={m.label}
+            className={`glass-card p-6 flex flex-col items-center text-center space-y-3 group relative hover:border-white/20 transition-all animate-fadeIn fill-mode-backwards`}
+            style={{ animationDelay: `${i * 100}ms` }}
+          >
             <div className={`p-4 rounded-2xl mb-2 group-hover:scale-110 transition-transform duration-500 shadow-lg ${m.color}`}>
               <m.icon size={32} strokeWidth={1.5} />
             </div>
@@ -34,7 +38,7 @@ export default function Dashboard() {
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 space-y-8">
+        <div className="lg:col-span-2 space-y-8 animate-fadeIn delay-300">
           <div className="glass-card p-10 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
 
@@ -80,7 +84,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 animate-fadeIn delay-500">
           <div className="glass-card p-8 bg-black/40 border-none relative overflow-hidden">
             {/* Map texture overlay could go here */}
             <h3 className="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">📍 Locatie</h3>
