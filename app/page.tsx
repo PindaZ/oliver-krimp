@@ -1,4 +1,7 @@
 import Hero from "@/components/Hero";
+import AnimatedCounter from "@/components/AnimatedCounter";
+import SeasonWidget from "@/components/SeasonWidget";
+import FunFacts from "@/components/FunFacts";
 import { Users, Droplets, Maximize, Wheat, Info, ExternalLink, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -28,7 +31,9 @@ export default function Dashboard() {
             <div className={`p-4 rounded-2xl mb-2 group-hover:scale-110 transition-transform duration-500 shadow-lg ${m.color}`}>
               <m.icon size={32} strokeWidth={1.5} />
             </div>
-            <span className="text-3xl font-black text-white">{m.value}</span>
+            <span className="text-3xl font-black text-white">
+              <AnimatedCounter value={m.value} />
+            </span>
             <div className="flex flex-col items-center gap-1">
               <span className="text-xs uppercase tracking-widest font-bold text-slate-400 group-hover:text-emerald-300 transition-colors">{m.label}</span>
               <span className="text-[10px] text-slate-600 font-mono">Bron: {m.source}</span>
@@ -108,7 +113,15 @@ export default function Dashboard() {
               <p className="text-sm text-amber-200/80 mt-2 leading-relaxed">Onderhoud aan stuwen en duikers. Controle waterpeilen.</p>
             </div>
           </div>
+
+          {/* Seasonal Widget */}
+          <SeasonWidget />
         </div>
+      </section>
+
+      {/* Fun Facts Section */}
+      <section className="mt-8">
+        <FunFacts />
       </section>
     </div>
   );
