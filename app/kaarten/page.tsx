@@ -21,23 +21,23 @@ export default function KaartenPage() {
         <div className="h-[calc(100vh-8rem)] flex flex-col space-y-6 animate-fadeIn">
             <div className="flex justify-between items-end">
                 <div>
-                    <h1 className="text-4xl font-black text-slate-900 flex items-center gap-3">
+                    <h1 className="text-4xl font-black text-white flex items-center gap-3">
                         <span className="bg-green-600 p-2 rounded-2xl text-white shadow-lg shadow-green-600/20">
                             <MapIcon size={32} />
                         </span>
                         <span>Gebiedskaart</span>
                     </h1>
-                    <p className="text-slate-600 mt-2 max-w-xl">
+                    <p className="text-slate-300 mt-2 max-w-xl">
                         Verken de actuele status van de Krimpenerwaard. Klik op de iconen voor meer informatie over natuurgebieden en waterbeheer.
                     </p>
                 </div>
 
                 <div className="hidden md:flex gap-3">
-                    <button className="glass-card px-4 py-2 text-sm font-bold text-green-900 hover:scale-105 active:scale-95 flex items-center gap-2">
+                    <button className="glass-card px-4 py-2 text-sm font-bold text-white hover:scale-105 active:scale-95 flex items-center gap-2">
                         <Layers size={16} />
                         Kaartlagen
                     </button>
-                    <button className="glass-card px-4 py-2 text-sm font-bold text-green-900 hover:scale-105 active:scale-95 flex items-center gap-2">
+                    <button className="glass-card px-4 py-2 text-sm font-bold text-white hover:scale-105 active:scale-95 flex items-center gap-2">
                         <Info size={16} />
                         Legenda
                     </button>

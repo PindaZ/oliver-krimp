@@ -27,27 +27,27 @@ export default function WaterbeheerPage() {
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="glass-card p-8 border-l-8 border-blue-600">
                     <div className="flex items-center gap-3 mb-4">
-                        <div className="bg-blue-100 p-2 rounded-xl text-blue-700 font-bold">❄️ Winter</div>
-                        <h3 className="text-2xl font-black text-slate-900 leading-none">0 cm</h3>
+                        <div className="bg-blue-500/20 p-2 rounded-xl text-blue-300 font-bold">❄️ Winter</div>
+                        <h3 className="text-2xl font-black text-white leading-none">0 cm</h3>
                     </div>
-                    <p className="text-sm text-slate-500 mb-4 uppercase tracking-widest font-bold">Periode: 1 okt - 1 apr</p>
-                    <p className="text-slate-600">In de winter mag het water tot aan het maaiveld komen. Plas-dras situaties zijn wenselijk voor weidevogels.</p>
+                    <p className="text-sm text-slate-400 mb-4 uppercase tracking-widest font-bold">Periode: 1 okt - 1 apr</p>
+                    <p className="text-slate-300">In de winter mag het water tot aan het maaiveld komen. Plas-dras situaties zijn wenselijk voor weidevogels.</p>
                 </div>
 
                 <div className="glass-card p-8 border-l-8 border-green-600">
                     <div className="flex items-center gap-3 mb-4">
-                        <div className="bg-green-100 p-2 rounded-xl text-green-700 font-bold">☀️ Zomer</div>
-                        <h3 className="text-2xl font-black text-slate-900 leading-none">-20 tot -40 cm</h3>
+                        <div className="bg-green-500/20 p-2 rounded-xl text-green-300 font-bold">☀️ Zomer</div>
+                        <h3 className="text-2xl font-black text-white leading-none">-20 tot -40 cm</h3>
                     </div>
-                    <p className="text-sm text-slate-500 mb-4 uppercase tracking-widest font-bold">Periode: 1 apr - 1 okt</p>
-                    <p className="text-slate-600">Zomerpeil zakt om maaien mogelijk te maken. Echter, voor blauwgrasland nooit dieper dan 40 cm!</p>
+                    <p className="text-sm text-slate-400 mb-4 uppercase tracking-widest font-bold">Periode: 1 apr - 1 okt</p>
+                    <p className="text-slate-300">Zomerpeil zakt om maaien mogelijk te maken. Echter, voor blauwgrasland nooit dieper dan 40 cm!</p>
                 </div>
             </section>
 
-            <section className="glass-card p-10 bg-gradient-to-br from-blue-50/50 to-green-50/50">
+            <section className="glass-card p-10">
                 <div className="max-w-3xl mx-auto text-center mb-12">
-                    <h2 className="text-4xl font-black text-slate-900 mb-4">Greppel Beslishulp</h2>
-                    <p className="text-slate-600 italic">Beantwoord de vragen om het juiste beheeradvies te krijgen voor uw perceel.</p>
+                    <h2 className="text-4xl font-black text-white mb-4">Greppel Beslishulp</h2>
+                    <p className="text-slate-300 italic">Beantwoord de vragen om het juiste beheeradvies te krijgen voor uw perceel.</p>
                 </div>
 
                 <div className="max-w-2xl mx-auto border-2 border-white/50 rounded-[3rem] p-8 shadow-inner bg-white/30">
@@ -60,7 +60,7 @@ export default function WaterbeheerPage() {
                                 exit={{ opacity: 0, x: -20 }}
                                 className="space-y-6 text-center"
                             >
-                                <h4 className="text-2xl font-bold text-slate-800">Is er sprake van langdurige wateroverlast in het groeiseizoen?</h4>
+                                <h4 className="text-2xl font-bold text-white">Is er sprake van langdurige wateroverlast in het groeiseizoen?</h4>
                                 <div className="flex justify-center gap-4">
                                     <button onClick={() => setQ1('ja')} className="bg-green-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-green-700 transition-colors">Ja</button>
                                     <button onClick={() => setQ1('nee')} className="bg-slate-800 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-slate-900 transition-colors">Nee</button>
@@ -90,7 +90,7 @@ export default function WaterbeheerPage() {
                                 exit={{ opacity: 0, x: -20 }}
                                 className="space-y-6 text-center"
                             >
-                                <h4 className="text-2xl font-bold text-slate-800">Is het perceel een Blauwgrasland of Vochtig Hooiland?</h4>
+                                <h4 className="text-2xl font-bold text-white">Is het perceel een Blauwgrasland of Vochtig Hooiland?</h4>
                                 <div className="flex justify-center gap-4">
                                     <button onClick={() => setQ2('ja')} className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-blue-700 transition-colors">Ja</button>
                                     <button onClick={() => setQ2('nee')} className="bg-slate-800 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-slate-900 transition-colors">Nee / Regulier</button>
@@ -124,7 +124,7 @@ export default function WaterbeheerPage() {
                                 exit={{ opacity: 0, x: -20 }}
                                 className="space-y-6 text-center"
                             >
-                                <h4 className="text-2xl font-bold text-slate-800">Zijn de greppels volledig dichtgegroeid of vertrapt?</h4>
+                                <h4 className="text-2xl font-bold text-white">Zijn de greppels volledig dichtgegroeid of vertrapt?</h4>
                                 <div className="flex justify-center gap-4">
                                     <button onClick={() => setQ3('ja')} className="bg-red-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-red-700 transition-colors">Ja</button>
                                     <button onClick={() => setQ3('nee')} className="bg-slate-800 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-slate-900 transition-colors">Nee</button>
