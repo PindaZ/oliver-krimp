@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { TreePine, Waves, Mountain, ScrollText, Map as MapIcon, Sprout, Home, Compass } from 'lucide-react';
+import { TreePine, Waves, Mountain, ScrollText, Map as MapIcon, Sprout, Home, Compass, Search } from 'lucide-react';
 
 const navItems = [
     { name: 'Dashboard', href: '/', icon: Home },
+    { name: 'Observaties', href: '/observaties', icon: Search },
     { name: 'Natuur', href: '/natuur', icon: Sprout },
     { name: 'Hotspots', href: '/hotspots', icon: Compass },
     { name: 'Blauwgrasland', href: '/blauwgrasland', icon: TreePine },
