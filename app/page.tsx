@@ -64,20 +64,23 @@ export default function Dashboard() {
                 </div>
                 <p className="text-sm text-emerald-200/70">Essentieel leefgebied voor weidevogels en zeldzame flora.</p>
               </Link>
-              <div className="p-5 bg-sky-900/20 rounded-2xl border border-sky-500/20 hover:bg-sky-900/40 transition-colors cursor-default">
-                <h4 className="font-bold text-sky-100 mb-2">Hydrologisch Belang</h4>
+              <Link href="/hydrologie" className="p-5 bg-sky-900/20 rounded-2xl border border-sky-500/20 hover:bg-sky-900/40 transition-all group/card cursor-pointer">
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-sky-100">Hydrologisch Belang</h4>
+                  <ArrowUpRight size={16} className="text-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity" />
+                </div>
                 <p className="text-sm text-sky-200/70">Beheer van waterpeilen ter voorkoming van veenoxidatie.</p>
-              </div>
+              </Link>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/natuur" className="glass-card p-8 border-l-4 border-emerald-500 hover:border-emerald-400 transition-colors hover:shadow-emerald-900/20 hover:shadow-2xl group cursor-pointer">
+            <Link href="/weidevogels" className="glass-card p-8 border-l-4 border-emerald-500 hover:border-emerald-400 transition-colors hover:shadow-emerald-900/20 hover:shadow-2xl group cursor-pointer">
               <div className="flex justify-between items-center mb-3">
                 <h3 className="text-xl font-bold text-white flex items-center gap-2">🦅 <span className="font-serif">Weidevogelparadijs</span></h3>
                 <ArrowUpRight size={18} className="text-slate-500 group-hover:text-emerald-400 transition-colors" />
               </div>
-              <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Ideaal broedgebied voor de 'Grote Vier': Grutto, Kievit, Tureluur en Scholekster.</p>
+              <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">De Grote Vier: Grutto, Kievit, Tureluur en Scholekster.</p>
             </Link>
             <Link href="/blauwgrasland" className="glass-card p-8 border-l-4 border-lime-500 hover:border-lime-400 transition-colors hover:shadow-lime-900/20 hover:shadow-2xl group cursor-pointer">
               <div className="flex justify-between items-center mb-3">
