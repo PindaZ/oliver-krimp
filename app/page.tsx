@@ -2,10 +2,10 @@ import Hero from "@/components/Hero";
 import { Users, Droplets, Maximize, Wheat, Info } from "lucide-react";
 
 const metrics = [
-  { label: 'Oppervlakte', value: '~160 km²', icon: Maximize, color: 'text-blue-600' },
-  { label: 'Inwoners', value: '~56.000', icon: Users, color: 'text-indigo-600' },
-  { label: 'Gem. Peil', value: '-2 m NAP', icon: Droplets, color: 'text-sky-600' },
-  { label: 'Landschap', value: 'Veenweide', icon: Wheat, color: 'text-amber-600' },
+  { label: 'Oppervlakte', value: '~160 km²', icon: Maximize, color: 'text-emerald-400 bg-emerald-400/10' },
+  { label: 'Inwoners', value: '~56.000', icon: Users, color: 'text-amber-400 bg-amber-400/10' },
+  { label: 'Gem. Peil', value: '-2 m NAP', icon: Droplets, color: 'text-sky-400 bg-sky-400/10' },
+  { label: 'Landschap', value: 'Veenweide', icon: Wheat, color: 'text-lime-400 bg-lime-400/10' },
 ];
 
 export default function Dashboard() {
@@ -19,73 +19,76 @@ export default function Dashboard() {
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {metrics.map((m) => (
-          <div key={m.label} className="glass-card p-6 flex flex-col items-center text-center space-y-2 group">
-            <div className={`p-4 rounded-2xl bg-white shadow-inner mb-2 group-hover:scale-110 transition-transform ${m.color}`}>
-              <m.icon size={32} />
+          <div key={m.label} className="glass-card p-6 flex flex-col items-center text-center space-y-3 group border-t border-white/5">
+            <div className={`p-4 rounded-2xl mb-2 group-hover:scale-110 transition-transform duration-500 shadow-lg ${m.color}`}>
+              <m.icon size={32} strokeWidth={1.5} />
             </div>
-            <span className="text-3xl font-black text-green-900">{m.value}</span>
-            <span className="text-xs uppercase tracking-widest font-bold text-slate-500">{m.label}</span>
+            <span className="text-3xl font-black text-white">{m.value}</span>
+            <span className="text-xs uppercase tracking-widest font-bold text-slate-400 group-hover:text-emerald-300 transition-colors">{m.label}</span>
           </div>
         ))}
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-8">
-          <div className="glass-card p-8">
-            <h2 className="text-3xl font-black text-green-900 mb-4 flex items-center gap-3">
-              <span className="bg-green-100 p-2 rounded-lg"><Info className="text-green-700" /></span>
-              Het Groene Hart
+          <div className="glass-card p-10 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+
+            <h2 className="text-3xl font-black text-white mb-6 flex items-center gap-4">
+              <span className="bg-emerald-900/50 p-2 rounded-xl border border-emerald-500/30"><Info className="text-emerald-400" /></span>
+              <span className="font-serif italic">Het Groene Hart</span>
             </h2>
-            <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              De <strong className="text-green-800">Krimpenerwaard</strong> is een uniek veenweidegebied ingeklemd tussen de rivieren de <strong>Lek</strong>,
-              de <strong>Hollandse IJssel</strong> en de <strong>Vlist</strong>. Het is een oase van rust in de drukke Randstad,
+            <p className="text-lg text-slate-300 leading-relaxed mb-8 font-light">
+              De <strong className="text-emerald-300 font-normal">Krimpenerwaard</strong> is een uniek veenweidegebied ingeklemd tussen de rivieren de <strong className="text-white">Lek</strong>,
+              de <strong className="text-white">Hollandse IJssel</strong> en de <strong className="text-white">Vlist</strong>. Het is een oase van rust in de drukke Randstad,
               gekenmerkt door een fijnmazig patroon van sloten, smalle kavels en wuivend riet.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 bg-green-50/50 rounded-2xl border border-green-100">
-                <h4 className="font-bold text-green-900 mb-1">Ecologische Hotspots</h4>
-                <p className="text-sm text-slate-600">Essentieel leefgebied voor weidevogels en zeldzame flora.</p>
+              <div className="p-5 bg-emerald-900/20 rounded-2xl border border-emerald-500/20 hover:bg-emerald-900/40 transition-colors">
+                <h4 className="font-bold text-emerald-100 mb-2">Ecologische Hotspots</h4>
+                <p className="text-sm text-emerald-200/70">Essentieel leefgebied voor weidevogels en zeldzame flora.</p>
               </div>
-              <div className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100">
-                <h4 className="font-bold text-blue-900 mb-1">Hydrologisch Belang</h4>
-                <p className="text-sm text-slate-600">Beheer van waterpeilen ter voorkoming van veenoxidatie.</p>
+              <div className="p-5 bg-sky-900/20 rounded-2xl border border-sky-500/20 hover:bg-sky-900/40 transition-colors">
+                <h4 className="font-bold text-sky-100 mb-2">Hydrologisch Belang</h4>
+                <p className="text-sm text-sky-200/70">Beheer van waterpeilen ter voorkoming van veenoxidatie.</p>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-card p-6 border-l-8 border-green-600">
-              <h3 className="text-xl font-bold text-green-900 mb-2">🦅 Weidevogelparadijs</h3>
-              <p className="text-sm text-slate-600">Ideaal broedgebied voor de 'Grote Vier': Grutto, Kievit, Tureluur en Scholekster.</p>
+            <div className="glass-card p-8 border-l-4 border-emerald-500 hover:border-emerald-400 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">🦅 <span className="font-serif">Weidevogelparadijs</span></h3>
+              <p className="text-sm text-slate-400 leading-relaxed">Ideaal broedgebied voor de 'Grote Vier': Grutto, Kievit, Tureluur en Scholekster.</p>
             </div>
-            <div className="glass-card p-6 border-l-8 border-blue-600">
-              <h3 className="text-xl font-bold text-blue-900 mb-2">🌿 Blauwgraslanden</h3>
-              <p className="text-sm text-slate-600">Zeldzame vegetatie op de Kortlandse Polder en Bilwijk.</p>
+            <div className="glass-card p-8 border-l-4 border-lime-500 hover:border-lime-400 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">🌿 <span className="font-serif">Blauwgraslanden</span></h3>
+              <p className="text-sm text-slate-400 leading-relaxed">Zeldzame vegetatie op de Kortlandse Polder en Bilwijk.</p>
             </div>
           </div>
         </div>
 
         <div className="space-y-6">
-          <div className="glass-card p-6 bg-slate-800/90 text-white border-none">
-            <h3 className="text-xl font-bold mb-4">📍 Locatie</h3>
-            <div className="space-y-4">
+          <div className="glass-card p-8 bg-black/40 border-none relative overflow-hidden">
+            {/* Map texture overlay could go here */}
+            <h3 className="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">📍 Locatie</h3>
+            <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="bg-white/20 p-2 rounded-lg">51.95° N</div>
-                <div className="bg-white/20 p-2 rounded-lg">4.75° O</div>
+                <div className="bg-white/10 p-3 rounded-lg font-mono text-emerald-400">51.95° N</div>
+                <div className="bg-white/10 p-3 rounded-lg font-mono text-emerald-400">4.75° O</div>
               </div>
-              <ul className="space-y-2 text-slate-300 text-sm">
-                <li>• Gouda (Noordoost)</li>
-                <li>• Rotterdam (West)</li>
-                <li>• Schoonhoven (Zuidoost)</li>
+              <ul className="space-y-3 text-slate-400 text-sm">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Gouda (Noordoost)</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Rotterdam (West)</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Schoonhoven (Zuidoost)</li>
               </ul>
             </div>
           </div>
 
-          <div className="glass-card p-6 border-t-8 border-amber-500">
-            <h3 className="text-xl font-bold text-slate-900 mb-2">🚧 Actueel Beheer</h3>
-            <div className="bg-amber-50 p-4 rounded-xl border border-amber-100">
-              <span className="text-amber-800 font-bold text-xs uppercase tracking-tighter">Winterrust</span>
-              <p className="text-sm text-amber-900 mt-1">Onderhoud aan stuwen en duikers. Controle waterpeilen.</p>
+          <div className="glass-card p-8 border-t-4 border-amber-500">
+            <h3 className="text-xl font-bold text-white mb-4">🚧 Actueel Beheer</h3>
+            <div className="bg-amber-900/20 p-5 rounded-xl border border-amber-500/20">
+              <span className="text-amber-400 font-bold text-xs uppercase tracking-tighter">Winterrust</span>
+              <p className="text-sm text-amber-200/80 mt-2 leading-relaxed">Onderhoud aan stuwen en duikers. Controle waterpeilen.</p>
             </div>
           </div>
         </div>

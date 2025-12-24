@@ -20,19 +20,19 @@ export default function HistoriePage() {
             />
 
             <div className="max-w-4xl mx-auto space-y-8 relative">
-                <div className="absolute left-8 top-0 bottom-0 w-1 bg-green-200 rounded-full hidden md:block" />
+                <div className="absolute left-8 top-0 bottom-0 w-1 bg-emerald-500/30 rounded-full hidden md:block" />
 
                 {timeline.map((event, idx) => (
                     <div key={idx} className="relative pl-0 md:pl-20 group">
-                        <div className="absolute left-4 top-1 w-8 h-8 bg-green-600 rounded-full border-4 border-white shadow-lg hidden md:flex items-center justify-center z-10 group-hover:scale-125 transition-transform" />
+                        <div className="absolute left-4 top-1 w-8 h-8 bg-emerald-600 rounded-full border-4 border-emerald-900 shadow-lg hidden md:flex items-center justify-center z-10 group-hover:scale-125 transition-transform" />
 
-                        <div className="glass-card p-8 group-hover:bg-white/80 transition-all">
+                        <div className="glass-card p-8 group-hover:bg-black/50 transition-all border border-white/10">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <span className="text-3xl font-black text-green-700 tracking-tighter">{event.year}</span>
-                                <span className="text-4xl bg-white p-2 rounded-2xl shadow-inner">{event.icon}</span>
+                                <span className="text-3xl font-black text-emerald-400 tracking-tighter font-serif">{event.year}</span>
+                                <span className="text-4xl bg-white/10 p-2 rounded-2xl shadow-inner backdrop-blur-sm">{event.icon}</span>
                             </div>
-                            <h3 className="text-2xl font-black text-slate-800 mb-2">{event.title}</h3>
-                            <p className="text-slate-600 leading-relaxed">{event.desc}</p>
+                            <h3 className="text-2xl font-black text-white mb-2">{event.title}</h3>
+                            <p className="text-slate-300 leading-relaxed font-light">{event.desc}</p>
                         </div>
                     </div>
                 ))}

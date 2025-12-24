@@ -45,7 +45,7 @@ export default function Map() {
     // or just apply it to markers. Applying to markers is safer/cleaner.
 
     return (
-        <div className="h-full w-full rounded-3xl overflow-hidden border border-white/40 shadow-inner">
+        <div className="h-full w-full rounded-3xl overflow-hidden border border-white/20 shadow-2xl relative z-0">
             <MapContainer center={CENTER} zoom={ZOOM} scrollWheelZoom={true} className="h-full w-full z-0">
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

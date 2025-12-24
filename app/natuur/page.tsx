@@ -37,39 +37,40 @@ export default function NatuurPage() {
 
             {habitats.map((h) => (
                 <section key={h.id} className="space-y-8">
-                    <div className="flex items-center justify-between border-b pb-4 border-slate-200">
-                        <div>
-                            <div className="flex items-center gap-3">
-                                <span className={`${h.color} text-white px-3 py-1 rounded-lg font-black text-sm`}>{h.id}</span>
-                                <h2 className="text-3xl font-black text-slate-900">{h.name}</h2>
-                            </div>
-                            <div className="flex gap-2 mt-2">
-                                {h.tags.map(tag => (
-                                    <span key={tag} className="text-[10px] uppercase font-bold tracking-widest text-slate-500 bg-white/50 px-2 py-1 rounded-md border border-slate-200">{tag}</span>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="hidden sm:flex bg-white p-3 rounded-2xl shadow-sm">
-                            {h.id === 'N10.02' ? <Leaf className="text-green-600" size={32} /> : <Bird className="text-blue-600" size={32} />}
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {h.species.map((s) => (
-                            <div key={s.name} className="glass-card overflow-hidden group">
-                                <div
-                                    className="h-48 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                    style={{ backgroundImage: `url(${s.img})` }}
-                                />
-                                <div className="p-4 bg-white/40">
-                                    <h4 className="font-bold text-slate-900">{s.name}</h4>
-                                    <p className="text-xs text-slate-500 italic uppercase">Indicatorsoort</p>
+                    <section key={h.id} className="space-y-8">
+                        <div className="flex items-center justify-between border-b pb-4 border-white/10">
+                            <div>
+                                <div className="flex items-center gap-3">
+                                    <span className={`${h.color} text-white px-3 py-1 rounded-lg font-black text-sm shadow-lg`}>{h.id}</span>
+                                    <h2 className="text-3xl font-black text-white font-serif">{h.name}</h2>
+                                </div>
+                                <div className="flex gap-2 mt-2">
+                                    {h.tags.map(tag => (
+                                        <span key={tag} className="text-[10px] uppercase font-bold tracking-widest text-slate-400 bg-white/5 px-2 py-1 rounded-md border border-white/10">{tag}</span>
+                                    ))}
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                </section>
+                            <div className="hidden sm:flex bg-white/10 p-3 rounded-2xl shadow-sm border border-white/10">
+                                {h.id === 'N10.02' ? <Leaf className="text-emerald-400" size={32} /> : <Bird className="text-sky-400" size={32} />}
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {h.species.map((s) => (
+                                <div key={s.name} className="glass-card overflow-hidden group border border-white/10">
+                                    <div
+                                        className="h-48 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                        style={{ backgroundImage: `url(${s.img})` }}
+                                    />
+                                    <div className="p-4 bg-black/40 backdrop-blur-md">
+                                        <h4 className="font-bold text-white">{s.name}</h4>
+                                        <p className="text-xs text-slate-400 italic uppercase">Indicatorsoort</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
             ))}
-        </div>
-    );
+                </div>
+            );
 }

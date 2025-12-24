@@ -25,10 +25,10 @@ export default function Navigation() {
         <nav className="glass-nav px-8 py-4 mb-8 rounded-full mt-4 mx-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 group">
-                    <div className="bg-green-600 p-2 rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform">
+                    <div className="bg-emerald-500 p-2 rounded-xl text-white shadow-lg shadow-emerald-900/20 group-hover:scale-110 transition-transform">
                         <TreePine size={24} />
                     </div>
-                    <span className="font-black text-2xl tracking-tighter text-green-900">OLIVER</span>
+                    <span className="font-black text-2xl tracking-tighter text-white font-serif">OLIVER</span>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-1 bg-white/20 p-1 rounded-full border border-white/40">
@@ -37,21 +37,18 @@ export default function Navigation() {
                         const Icon = item.icon;
 
                         return (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${isActive
-                                        ? 'bg-green-600 text-white shadow-md'
-                                        : 'hover:bg-white/40 text-green-900'
-                                    }`}
+                            className = {`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${isActive
+                                ? 'bg-emerald-500 text-white shadow-md shadow-emerald-900/20'
+                                : 'hover:bg-white/10 text-emerald-100 hover:text-white'
+                                }`}
                             >
                                 <Icon size={18} />
                                 <span className="text-sm font-semibold">{item.name}</span>
                             </Link>
-                        );
+                );
                     })}
-                </div>
             </div>
-        </nav>
+        </div>
+        </nav >
     );
 }

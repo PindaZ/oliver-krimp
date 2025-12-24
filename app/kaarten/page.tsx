@@ -48,20 +48,20 @@ export default function KaartenPage() {
                 <Map />
 
                 {/* Floating overlay for mobile/quick stats */}
-                <div className="absolute top-4 right-4 z-[400] glass-card p-4 w-64 hidden lg:block">
-                    <h3 className="font-bold text-slate-800 mb-2 border-b border-slate-200 pb-2">Legenda</h3>
+                <div className="absolute top-4 right-4 z-[400] glass-card p-4 w-64 hidden lg:block bg-black/60 border-white/10">
+                    <h3 className="font-bold text-white mb-2 border-b border-white/10 pb-2">Legenda</h3>
                     <div className="space-y-2">
                         <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-full bg-green-500 shadow-sm ring-2 ring-white"></span>
-                            <span className="text-sm text-slate-600">Natuurreservaat</span>
+                            <span className="w-3 h-3 rounded-full bg-emerald-500 shadow-sm ring-2 ring-white/20"></span>
+                            <span className="text-sm text-slate-300">Natuurreservaat</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-full bg-blue-500 shadow-sm ring-2 ring-white"></span>
-                            <span className="text-sm text-slate-600">Waterwegen</span>
+                            <span className="w-3 h-3 rounded-full bg-blue-500 shadow-sm ring-2 ring-white/20"></span>
+                            <span className="text-sm text-slate-300">Waterwegen</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-full bg-amber-500 shadow-sm ring-2 ring-white"></span>
-                            <span className="text-sm text-slate-600">Cultuurhistorie</span>
+                            <span className="w-3 h-3 rounded-full bg-amber-500 shadow-sm ring-2 ring-white/20"></span>
+                            <span className="text-sm text-slate-300">Cultuurhistorie</span>
                         </div>
                     </div>
                 </div>

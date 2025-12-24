@@ -10,38 +10,38 @@ export default function BodemPage() {
                 image="/images/hero_soil.png"
             />
 
-            <div className="glass-card p-8 bg-amber-50/30">
-                <h2 className="text-3xl font-black text-amber-900 mb-4 flex items-center gap-3">
-                    <Layers size={32} />
+            <div className="glass-card p-8 bg-amber-900/20 border-amber-500/20">
+                <h2 className="text-3xl font-black text-amber-200 mb-4 flex items-center gap-3 font-serif">
+                    <Layers size={32} className="text-amber-400" />
                     De Krimpenerwaardse Ondergrond
                 </h2>
-                <p className="text-lg text-slate-700">
+                <p className="text-lg text-amber-100/80 leading-relaxed font-light">
                     Het landschap wordt bepaald door de strijd tussen water en land.
-                    De bodemopbouw vertelt het verhaal van <strong>veenmosgroei</strong> (moerassen) en
-                    <strong>rivierafzettingen</strong> (klei).
+                    De bodemopbouw vertelt het verhaal van <strong className="text-white font-normal">veenmosgroei</strong> (moerassen) en
+                    <strong className="text-white font-normal">rivierafzettingen</strong> (klei).
                 </p>
             </div>
 
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="space-y-6">
-                    <h3 className="text-2xl font-black text-amber-800">Het Veenpakket</h3>
-                    <p className="text-slate-600">
+                    <h3 className="text-2xl font-black text-amber-100 font-serif">Het Veenpakket</h3>
+                    <p className="text-slate-300">
                         Veen is organisch materiaal gevormd onder natte, zuurstofarme omstandigheden.
                         In de Krimpenerwaard vinden we drie hoofdlagen die cruciaal zijn voor het waterbeheer.
                     </p>
 
                     <div className="space-y-4">
-                        <div className="glass-card p-4 hover:border-amber-400 border-l-4 border-amber-600">
-                            <h4 className="font-bold text-amber-900">🌱 Zeggeveen (0-1m)</h4>
-                            <p className="text-sm text-slate-600">De bovenste laag. Vezelrijk en vaak gemengd met wat klei. Hier groeien de graslanden op.</p>
+                        <div className="glass-card p-4 hover:border-amber-400/50 border-l-4 border-amber-500/50 bg-amber-950/30 transition-colors">
+                            <h4 className="font-bold text-amber-200">🌱 Zeggeveen (0-1m)</h4>
+                            <p className="text-sm text-slate-400">De bovenste laag. Vezelrijk en vaak gemengd met wat klei. Hier groeien de graslanden op.</p>
                         </div>
-                        <div className="glass-card p-4 hover:border-amber-400 border-l-4 border-amber-700">
-                            <h4 className="font-bold text-amber-900">🌾 Rietveen (1-3m)</h4>
-                            <p className="text-sm text-slate-600">De middelste laag. Ontstaan in rietmoerassen. Lichtbruin en kruimelig.</p>
+                        <div className="glass-card p-4 hover:border-amber-400/50 border-l-4 border-amber-700/50 bg-amber-950/40 transition-colors">
+                            <h4 className="font-bold text-amber-200">🌾 Rietveen (1-3m)</h4>
+                            <p className="text-sm text-slate-400">De middelste laag. Ontstaan in rietmoerassen. Lichtbruin en kruimelig.</p>
                         </div>
-                        <div className="glass-card p-4 hover:border-amber-400 border-l-4 border-amber-900">
-                            <h4 className="font-bold text-amber-900">🌲 Bosveen (3-6m)</h4>
-                            <p className="text-sm text-slate-600">De onderste laag. Zeer donker, compact en vol houtresten van oude moerasbossen.</p>
+                        <div className="glass-card p-4 hover:border-amber-400/50 border-l-4 border-amber-900/50 bg-amber-950/50 transition-colors">
+                            <h4 className="font-bold text-amber-200">🌲 Bosveen (3-6m)</h4>
+                            <p className="text-sm text-slate-400">De onderste laag. Zeer donker, compact en vol houtresten van oude moerasbossen.</p>
                         </div>
                     </div>
                 </div>
