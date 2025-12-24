@@ -59,7 +59,7 @@ export default function NatuurPage() {
                             <div key={s.name} className="glass-card overflow-hidden group border border-white/10">
                                 <div
                                     className="h-48 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                    style={{ backgroundImage: `url(${s.img})` }}
+                                    style={{ backgroundImage: `url("${s.img}")` }}
                                 />
                                 <div className="p-4 bg-black/40 backdrop-blur-md">
                                     <h4 className="font-bold text-white">{s.name}</h4>
