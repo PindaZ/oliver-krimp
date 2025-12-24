@@ -37,18 +37,21 @@ export default function Navigation() {
                         const Icon = item.icon;
 
                         return (
-                            className = {`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${isActive
-                                ? 'bg-emerald-500 text-white shadow-md shadow-emerald-900/20'
-                                : 'hover:bg-white/10 text-emerald-100 hover:text-white'
-                                }`}
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${isActive
+                                    ? 'bg-emerald-500 text-white shadow-md shadow-emerald-900/20'
+                                    : 'hover:bg-white/10 text-emerald-100 hover:text-white'
+                                    }`}
                             >
                                 <Icon size={18} />
                                 <span className="text-sm font-semibold">{item.name}</span>
                             </Link>
-                );
+                        );
                     })}
+                </div>
             </div>
-        </div>
         </nav >
     );
 }
