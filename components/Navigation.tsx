@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { TreePine, Waves, Mountain, ScrollText, Map as MapIcon, Sprout, Home, Compass, Search, ListTodo } from 'lucide-react';
+import { TreePine, Waves, Mountain, ScrollText, Map as MapIcon, Sprout, Home, Compass, Search, ListTodo, BarChart3 } from 'lucide-react';
 
 const navItems = [
     { name: 'Dashboard', href: '/', icon: Home },
     { name: 'Observaties', href: '/observaties', icon: Search },
     { name: 'Taken', href: '/taken', icon: ListTodo },
+    { name: 'Rapportage', href: '/rapportage', icon: BarChart3 },
     { name: 'Natuur', href: '/natuur', icon: Sprout },
     { name: 'Hotspots', href: '/hotspots', icon: Compass },
     { name: 'Blauwgrasland', href: '/blauwgrasland', icon: TreePine },
