@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SeasonWidget from "@/components/SeasonWidget";
 import FunFacts from "@/components/FunFacts";
+import WeatherWidget from "@/components/WeatherWidget";
 import { Users, Droplets, Maximize, Wheat, Info, ExternalLink, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -116,6 +117,9 @@ export default function Dashboard() {
               <p className="text-sm text-amber-200/80 mt-2 leading-relaxed">Onderhoud aan stuwen en duikers. Controle waterpeilen.</p>
             </div>
           </div>
+
+          {/* Weather Widget */}
+          <WeatherWidget />
 
           {/* Seasonal Widget */}
           <SeasonWidget />
